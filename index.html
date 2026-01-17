@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ffffff">
-    <meta name="color-scheme" content="light only"> <title>Mais Energia</title>
+    <title>Masterclass - Método Exclusivo</title>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17873478836"></script>
     <script>
@@ -18,10 +18,6 @@
     <link rel="preload" href="https://scripts.converteai.net/d0d1a002-acf0-4f0f-8660-7e41487e7083/players/696bda86e1aa589ccc4979f4/v4/player.js" as="script">
     <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
     <link rel="preload" href="https://cdn.converteai.net/d0d1a002-acf0-4f0f-8660-7e41487e7083/695a5fa8667ebdae6555fac1/main.m3u8" as="fetch">
-    <link rel="dns-prefetch" href="https://cdn.converteai.net">
-    <link rel="dns-prefetch" href="https://scripts.converteai.net">
-    <link rel="dns-prefetch" href="https://images.converteai.net">
-    <link rel="dns-prefetch" href="https://api.vturb.com.br">
 
     <style>
         :root { color-scheme: light; }
@@ -29,23 +25,34 @@
         
         body { 
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-            background-color: #FFFFFF !important; 
-            color: #333 !important; 
+            background-color: #FFFFFF; 
+            color: #333; 
             line-height: 1.6; 
+            /* Garante que o rodapé fique no final se a tela for grande */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         
         .top-bar { 
             background-color: #c4170c; 
             padding: 12px 0; 
             text-align: center; 
-            color: white !important; 
+            color: white; 
             font-weight: 600; 
             font-size: 13px; 
         }
         
-        .top-bar span.highlight { font-weight: 800; color: #ffff00 !important; }
-        .main-wrapper { max-width: 800px; margin: 20px auto; padding: 0 20px; text-align: center; }
-        .safe-headline { display: none; }
+        .top-bar span.highlight { font-weight: 800; color: #ffff00; }
+        
+        .main-wrapper { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            padding: 0 20px; 
+            text-align: center; 
+            flex: 1; /* Empurra o rodapé para baixo */
+        }
+        
         .video-container { margin: 10px 0 20px 0; }
         
         .audio-alert { 
@@ -55,7 +62,7 @@
             font-size: 14px; 
             display: inline-block; 
             margin-top: 5px; 
-            color: #555 !important;
+            color: #555;
         }
 
         .ref-section { 
@@ -68,7 +75,7 @@
         
         .ref-title {
             background-color: rgb(59, 89, 152);
-            color: white !important;
+            color: white;
             padding: 10px;
             border-radius: 5px 5px 0 0;
             font-weight: 600;
@@ -81,51 +88,28 @@
         }
 
         .footer { 
-            background-color: #f9f9f9 !important;
-            color: #666 !important; 
+            background-color: #f9f9f9;
+            color: #666; 
             padding: 40px 20px; 
             font-size: 12px; 
-            margin-top: 20px; 
+            margin-top: 40px; 
             text-align: center; 
             border-top: 1px solid #eee;
         }
         .footer p { margin-bottom: 8px; }
-        .footer strong { color: #333 !important; }
+        .footer strong { color: #333; }
         
         .footer-disclaimer { 
             border: 1px solid #ddd; 
-            background-color: #fff !important;
+            background-color: #fff;
             padding: 15px; 
             margin: 0 auto 20px auto; 
             max-width: 700px; 
             font-size: 11px; 
-            color: #777 !important;
+            color: #777;
             border-radius: 4px;
         }
-        .footer-links a { color: #555 !important; text-decoration: none; margin: 0 10px; }
-
-        /* 
-            
-        */
-        .hidden-content-mask {
-            max-width: 900px;
-            margin: 10px auto;
-            padding: 20px;
-            /* Bonito*/
-            background-color: #ffffff !important; 
-            color: #fffffe !important; 
-            font-size: 9px;
-            text-align: justify;
-            line-height: 1.2;
-            overflow: hidden;
-            border: none !important;
-        }
-        
-        .hidden-content-mask h3 {
-            font-size: 10px;
-            color: #fffffe !important; 
-            margin-bottom: 5px;
-        }
+        .footer-links a { color: #555; text-decoration: none; margin: 0 10px; }
 
         @media (max-width: 600px) { .top-bar { padding: 10px 15px; font-size: 12px; } }
     </style>
@@ -133,7 +117,7 @@
 <body>
 
     <div class="top-bar">
-        <span id="viewers-count" class="highlight">...</span> profissionais assistindo.
+        <span id="viewers-count" class="highlight">...</span> pessoas assistindo.
         <br style="display:none;" class="mobile-break">
         Devido a alta demanda, garantimos a apresentação somente até: <span id="limit-date" class="highlight">...</span>
     </div>
@@ -146,40 +130,26 @@
         <p class="audio-alert">🔊 Por favor, verifique se o som está ligado.</p>
         
         <div class="ref-section">
-            <div class="ref-title">Referências</div>
-            <img src="image-footer.jpg" alt="parceiros-midia" class="ref-img">
+            <div class="ref-title">Referências em Mídia</div>
+            <img src="image-footer.jpg" alt="midia" class="ref-img">
         </div>
     </div>
 
     <div class="footer">
         <div class="footer-disclaimer">
-            <p><strong>Isenção de Responsabilidade:</strong> Este site não é afiliado ao Facebook, Google ou qualquer entidade de mídia social. Os resultados podem variar de pessoa para pessoa. As estratégias de gestão de tempo e produtividade dependem da dedicação individual.</p>
+            <p><strong>Isenção de Responsabilidade:</strong> Este site não é afiliado ao Facebook, Google ou qualquer entidade de mídia social. Os resultados podem variar de pessoa para pessoa. As informações fornecidas neste site destinam-se ao seu conhecimento geral.</p>
         </div>
+        
         <p><strong>DROPIXES NEGÓCIOS DIGITAIS LTDA</strong></p>
         <p>CNPJ: 50.996.379/0001-00</p>
         <p>Contato: suporte@protocolonatural.com</p>
+        
         <br>
         <div class="footer-links">
             <a href="#">Termos de Uso</a> | 
             <a href="#">Política de Privacidade</a>
         </div>
         <p style="margin-top: 15px;">© 2026 Todos os direitos reservados.</p>
-    </div>
-
-    <div class="hidden-content-mask">
-        <h3>Mais energia e foco!</h3>
-        <p>
-            <strong>Otimização de Recursos Pessoais:</strong> No cenário moderno, a gestão eficiente do tempo não é suficiente; é necessário gerenciar a energia. Nossa metodologia baseia-se em princípios de produtividade e organização estratégica, visando auxiliar profissionais a alcançarem seus objetivos com clareza mental e consistência.
-        </p>
-        <p>
-            <strong>O Pilar do Foco Sustentável:</strong> A capacidade de manter a concentração em tarefas de alto valor é o que diferencia profissionais de alta performance. Abordamos técnicas de "Deep Work" (Trabalho Profundo) e eliminação de distrações, criando um ambiente propício para a realização de projetos complexos sem o desgaste mental comum da multitarefa.
-        </p>
-        <p>
-            <strong>Rotinas de Preparação:</strong> Assim como atletas se preparam antes de entrar em campo, profissionais de alto nível necessitam de rituais que sinalizem ao cérebro o momento de performance. Discutimos a estruturação de rotinas matinais e noturnas que preparam a mente para os desafios do dia a dia, reduzindo a fadiga de decisão.
-        </p>
-        <p>
-            <strong>Mindset de Crescimento:</strong> A resiliência diante de obstáculos é treinável. Através de ferramentas de desenvolvimento pessoal e planejamento estratégico, incentivamos a construção de uma mentalidade voltada para a solução de problemas e adaptação rápida às mudanças do mercado.
-        </p>
     </div>
 
     <script>
