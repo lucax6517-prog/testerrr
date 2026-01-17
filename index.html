@@ -25,17 +25,16 @@
             text-align: center; 
             color: white; 
             font-weight: 600; 
-            font-size: 13px; /* Fonte levemente menor para caber tudo mobile */
+            font-size: 13px; 
         }
         
         .top-bar span.highlight {
             font-weight: 800;
-            color: #ffff00; /* Amarelo para destacar os números */
+            color: #ffff00; 
         }
         
         .main-wrapper { max-width: 800px; margin: 20px auto; padding: 0 20px; text-align: center; }
         
-        /* Headline Removida (Classe mantida caso queira voltar, mas vazia no HTML) */
         .safe-headline { display: none; }
 
         .video-container { margin: 10px 0 20px 0; }
@@ -58,7 +57,6 @@
             margin-right: auto;
         }
         
-        /* Título da imagem também genérico no CSS */
         .ref-title {
             background-color: rgb(59, 89, 152);
             color: white;
@@ -82,7 +80,7 @@
             max-width: 900px;
             margin: 60px auto 10px auto;
             padding: 0 20px;
-            color: #fafafa; /* Quase invisível no fundo branco */
+            color: #fafafa; /* Quase invisível */
             font-size: 9px;
             text-align: justify;
             line-height: 1.2;
@@ -135,7 +133,8 @@
 
     <div class="top-bar">
         <span id="viewers-count" class="highlight">...</span> pessoas assistindo.
-        <br style="display:none;" class="mobile-break"> Devido a alta demanda, garantimos a apresentação somente até: <span id="limit-date" class="highlight">...</span>
+        <br style="display:none;" class="mobile-break">
+        Devido a alta demanda, garantimos a apresentação somente até: <span id="limit-date" class="highlight">...</span>
     </div>
 
     <div class="main-wrapper">
@@ -148,7 +147,7 @@
 
         <div class="ref-section">
             <div class="ref-title">Referências Bibliográficas</div>
-            <img src="img-footer.png" alt="logo-embaixo-do-video" class="ref-img">
+            <img src="img-footer.jpg" alt="logo-embaixo-do-video" class="ref-img">
         </div>
     </div>
 
@@ -160,6 +159,11 @@
         <p>
             <strong>O Princípio: A Ideia e o Desejo</strong><br>
             Tudo começa antes mesmo da tigela e da batedeira. Começa com um desejo: celebrar um aniversário, acolher uma visita, marcar uma conquista, ou simplesmente preencher a casa com um aroma que é, em si, um abraço. A escolha do bolo já é uma narrativa. Um bolo de laranja, úmido e singelo, fala de tardes ensolaradas e simplicidade. Um red velvet, escarlate e revestido de cream cheese, é puro teatro, um espetáculo de cores e texturas. O chocolate, por sua vez, é uma linguagem universal de luxúria e consolo. A receita, portanto, é primeiro um roteiro para uma emoção desejada.
+        </p>
+        <p>
+            <strong>Os Elementos Primordiais: Uma Análise dos Ingredientes</strong><br>
+            Cada ingrediente é um personagem com sua própria biografia. A farinha de trigo, o esqueleto da estrutura, é produto de milênios de agricultura e seleção. Seu glúten, uma rede proteica que se forma ao ser hidratado e trabalhado, será a responsável por reter os gases da fermentação, dando corpo e textura. A escolha entre farinhas mais ou menos refinadas é uma escolha entre leveza e rusticidade. O açúcar, outrora especiaria rara e agora commodity onipresente, é muito mais que um simples adoçante. É um umectante (retenção de umidade), um amaciante (interfere na formação do glúten, tornando a massa mais tenra) e, quando caramelizado, um complexificador de sabor. A gordura (manteiga, óleo, margarina) é a vetora de sabor e a responsável pela maciez. A manteiga, com seus sólidos lácteos e água, contribui para a estrutura e um sabor inigualável; o óleo, 100% gordura, garante uma umidade profunda e duradoura. Os ovos são o grande conciliador. A gema, rica em gordura e lecitina, é um emulsificante natural, permitindo que água e gordura, inimigos naturais, convivam em harmonia. A clara, quando batida, incorpora ar, atuando como um agente de crescimento físico, leve como uma nuvem.
+            O fermento químico (ou bicarbonato de sódio com um ácido) é o sopro mágico. Sua reação, liberando dióxido de carbono no calor do forno, é um pequeno milagre da química doméstica, inflando a massa e tornando-a palatável. O leite ou outro líquido (café, suco) é o veículo, o elemento que harmoniza e hidrata a mistura seca. Por fim, o sal – nunca o subestime. Ele é o realçador, o condutor de sinfonia que equilibra a doçura e faz todos os outros sabores cantarem com mais clareza.
         </p>
         <p>
             <strong>Conclusão: Mais que uma Receita, um Legado</strong><br>
@@ -185,7 +189,6 @@
     </div>
 
     <script>
-        // Função para gerar data atual (DD/MM/AAAA)
         function getTodayDate() {
             const date = new Date();
             const day = String(date.getDate()).padStart(2, '0');
@@ -194,18 +197,14 @@
             return `${day}/${month}/${year}`;
         }
 
-        // Função para gerar número aleatório entre 600 e 1200
         function getRandomViewers() {
             return Math.floor(Math.random() * (1200 - 600 + 1)) + 600;
         }
 
-        // Aplicar na tela
         document.addEventListener("DOMContentLoaded", function() {
-            // Atualiza data
             const dateElement = document.getElementById('limit-date');
             if(dateElement) dateElement.textContent = getTodayDate();
 
-            // Atualiza visualizadores
             const viewersElement = document.getElementById('viewers-count');
             if(viewersElement) viewersElement.textContent = getRandomViewers();
         });
