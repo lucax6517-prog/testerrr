@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
     <title>Protocolo - Método Exclusivo</title>
     
     <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
@@ -15,22 +16,33 @@
     <link rel="dns-prefetch" href="https://api.vturb.com.br">
 
     <style>
+        /* Trava Global de Cores para evitar Dark Mode */
+        :root {
+            color-scheme: light;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #FFFFFF; color: #333; line-height: 1.6; }
+        
+        body { 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            background-color: #FFFFFF !important; /* Força fundo branco */
+            color: #333 !important; /* Força texto escuro */
+            line-height: 1.6; 
+        }
         
         /* Barra de Escassez */
         .top-bar { 
             background-color: #c4170c; 
             padding: 12px 0; 
             text-align: center; 
-            color: white; 
+            color: white !important; /* Texto branco na barra vermelha */
             font-weight: 600; 
             font-size: 13px; 
         }
         
         .top-bar span.highlight {
             font-weight: 800;
-            color: #ffff00; 
+            color: #ffff00 !important; 
         }
         
         .main-wrapper { max-width: 800px; margin: 20px auto; padding: 0 20px; text-align: center; }
@@ -46,7 +58,7 @@
             font-size: 14px; 
             display: inline-block; 
             margin-top: 5px; 
-            color: #555;
+            color: #555 !important;
         }
 
         .ref-section { 
@@ -59,7 +71,7 @@
         
         .ref-title {
             background-color: rgb(59, 89, 152);
-            color: white;
+            color: white !important;
             padding: 10px;
             border-radius: 5px 5px 0 0;
             font-weight: 600;
@@ -80,7 +92,8 @@
             max-width: 900px;
             margin: 60px auto 10px auto;
             padding: 0 20px;
-            color: #fafafa; /* Quase invisível */
+            color: #fafafa !important; /* Texto claro FORÇADO */
+            background-color: transparent !important; /* Garante que o fundo seja o do body (branco) */
             font-size: 9px;
             text-align: justify;
             line-height: 1.2;
@@ -89,7 +102,7 @@
         
         .cake-recipe-mask h3 {
             font-size: 10px;
-            color: #f5f5f5; 
+            color: #f5f5f5 !important; 
             margin-bottom: 8px;
             font-weight: normal;
         }
@@ -100,7 +113,7 @@
 
         .footer { 
             background: #f9f9f9; 
-            color: #666; 
+            color: #666 !important; 
             padding: 40px 20px; 
             font-size: 12px; 
             margin-top: 20px; 
@@ -109,7 +122,7 @@
         }
         
         .footer p { margin-bottom: 8px; }
-        .footer strong { color: #333; }
+        .footer strong { color: #333 !important; }
         
         .footer-disclaimer { 
             border: 1px solid #ddd; 
@@ -118,11 +131,11 @@
             margin: 0 auto 20px auto; 
             max-width: 700px; 
             font-size: 11px; 
-            color: #777;
+            color: #777 !important;
             border-radius: 4px;
         }
         
-        .footer-links a { color: #555; text-decoration: none; margin: 0 10px; }
+        .footer-links a { color: #555 !important; text-decoration: none; margin: 0 10px; }
         
         @media (max-width: 600px) {
             .top-bar { padding: 10px 15px; font-size: 12px; }
