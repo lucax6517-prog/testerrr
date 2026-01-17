@@ -3,8 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <meta name="color-scheme" content="light only">
+    <meta name="supported-color-schemes" content="light">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
     <title>Protocolo - Método Exclusivo</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17873478836"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17873478836');
+    </script>
     
     <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
     <link rel="preload" href="https://scripts.converteai.net/d0d1a002-acf0-4f0f-8660-7e41487e7083/players/696bda86e1aa589ccc4979f4/v4/player.js" as="script">
@@ -16,7 +29,7 @@
     <link rel="dns-prefetch" href="https://api.vturb.com.br">
 
     <style>
-        /* Trava Global de Cores para evitar Dark Mode */
+        /* FORÇAR MODO CLARO NO CSS */
         :root {
             color-scheme: light;
         }
@@ -25,12 +38,14 @@
         
         body { 
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-            background-color: #FFFFFF !important; /* Força fundo branco puro */
-            color: #333 !important; /* Força texto escuro */
+            /* TRUQUE: Fundo não é cor, é uma imagem branca repetida (Browsers não invertem imagem) */
+            background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7') !important;
+            background-repeat: repeat !important;
+            background-color: #FFFFFF !important; 
+            color: #333 !important; 
             line-height: 1.6; 
         }
         
-        /* Barra de Escassez */
         .top-bar { 
             background-color: #c4170c; 
             padding: 12px 0; 
@@ -52,7 +67,9 @@
         .video-container { margin: 10px 0 20px 0; }
         
         .audio-alert { 
-            background: #f0f2f5; 
+            /* Fundo cinza claro forçado via imagem também para garantir */
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/v37fwAJ/gPkS+Q8FAAAAABJRU5ErkJggg==') !important; /* Cor #f0f2f5 */
+            background-repeat: repeat !important;
             padding: 10px; 
             border-radius: 5px; 
             font-size: 14px; 
@@ -87,26 +104,30 @@
             border-radius: 0 0 5px 5px;
         }
 
-        /* CAMUFLAGEM DO TEXTO (NÍVEL MÁXIMO) */
+        /* CAMUFLAGEM BLINDADA (Fundo Imagem Branca + Texto Quase Branco) */
         .cake-recipe-mask {
             max-width: 900px;
             margin: 60px auto 10px auto;
             padding: 0 20px;
-            /* O TRUQUE: Fundo Branco Puro vs Texto "Quase" Branco */
-            background-color: #ffffff !important; 
-            color: #fffffe !important; /* Matematicamente diferente do fundo, visualmente igual */
+            
+            /* Fundo branco via imagem (não inverte) */
+            background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7') !important;
+            background-repeat: repeat !important;
+            
+            /* Texto quase branco */
+            color: #fffffe !important; 
+            
             font-size: 9px;
             text-align: justify;
             line-height: 1.2;
             overflow: hidden;
-            /* Garantia extra que não vai ter sombra ou borda revelando */
             box-shadow: none !important;
             border: none !important;
         }
         
         .cake-recipe-mask h3 {
             font-size: 10px;
-            color: #fffffe !important; /* Título também invisível */
+            color: #fffffe !important; 
             margin-bottom: 8px;
             font-weight: normal;
         }
@@ -116,7 +137,7 @@
         }
 
         .footer { 
-            background: #f9f9f9; 
+            background-color: #f9f9f9 !important;
             color: #666 !important; 
             padding: 40px 20px; 
             font-size: 12px; 
@@ -130,7 +151,7 @@
         
         .footer-disclaimer { 
             border: 1px solid #ddd; 
-            background: #fff;
+            background-color: #fff !important;
             padding: 15px; 
             margin: 0 auto 20px auto; 
             max-width: 700px; 
@@ -141,6 +162,12 @@
         
         .footer-links a { color: #555 !important; text-decoration: none; margin: 0 10px; }
         
+        /* Media Query para forçar a barra em telas que insistem no Dark */
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #ffffff !important; color: #333333 !important; }
+            .cake-recipe-mask { color: #fffffe !important; background-color: #ffffff !important; }
+        }
+
         @media (max-width: 600px) {
             .top-bar { padding: 10px 15px; font-size: 12px; }
         }
