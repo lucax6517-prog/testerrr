@@ -18,19 +18,27 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #FFFFFF; color: #333; line-height: 1.6; }
         
-        .top-bar { background-color: #c4170c; padding: 10px 0; text-align: center; color: white; font-weight: bold; font-size: 14px; }
-        
-        .main-wrapper { max-width: 800px; margin: 30px auto; padding: 0 20px; text-align: center; }
-        
-        .safe-headline { 
-            font-size: 22px; 
-            font-weight: 700; 
-            color: #1a1a1a; 
-            margin-bottom: 20px;
-            line-height: 1.3;
+        /* Barra de Escassez */
+        .top-bar { 
+            background-color: #c4170c; 
+            padding: 12px 0; 
+            text-align: center; 
+            color: white; 
+            font-weight: 600; 
+            font-size: 13px; /* Fonte levemente menor para caber tudo mobile */
         }
+        
+        .top-bar span.highlight {
+            font-weight: 800;
+            color: #ffff00; /* Amarelo para destacar os números */
+        }
+        
+        .main-wrapper { max-width: 800px; margin: 20px auto; padding: 0 20px; text-align: center; }
+        
+        /* Headline Removida (Classe mantida caso queira voltar, mas vazia no HTML) */
+        .safe-headline { display: none; }
 
-        .video-container { margin: 20px 0; }
+        .video-container { margin: 10px 0 20px 0; }
         
         .audio-alert { 
             background: #f0f2f5; 
@@ -38,18 +46,19 @@
             border-radius: 5px; 
             font-size: 14px; 
             display: inline-block; 
-            margin-top: 10px; 
+            margin-top: 5px; 
             color: #555;
         }
 
         .ref-section { 
-            margin-top: 50px; 
+            margin-top: 40px; 
             text-align: center; 
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
         }
         
+        /* Título da imagem também genérico no CSS */
         .ref-title {
             background-color: rgb(59, 89, 152);
             color: white;
@@ -73,7 +82,7 @@
             max-width: 900px;
             margin: 60px auto 10px auto;
             padding: 0 20px;
-            color: #fafafa; //
+            color: #fafafa; /* Quase invisível no fundo branco */
             font-size: 9px;
             text-align: justify;
             line-height: 1.2;
@@ -116,15 +125,20 @@
         }
         
         .footer-links a { color: #555; text-decoration: none; margin: 0 10px; }
+        
+        @media (max-width: 600px) {
+            .top-bar { padding: 10px 15px; font-size: 12px; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="top-bar">Atenção: Assista à apresentação antes que saia do ar.</div>
+    <div class="top-bar">
+        <span id="viewers-count" class="highlight">...</span> pessoas assistindo.
+        <br style="display:none;" class="mobile-break"> Devido a alta demanda, garantimos a apresentação somente até: <span id="limit-date" class="highlight">...</span>
+    </div>
 
     <div class="main-wrapper">
-        <h1 class="safe-headline"></h1>
-
         <div class="video-container">
             <vturb-smartplayer id="vid-696bda86e1aa589ccc4979f4" style="display: block; margin: 0 auto; width: 100%; max-width: 600px;"></vturb-smartplayer> 
             <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/d0d1a002-acf0-4f0f-8660-7e41487e7083/players/696bda86e1aa589ccc4979f4/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
@@ -133,8 +147,8 @@
         <p class="audio-alert">🔊 Por favor, verifique se o som está ligado.</p>
 
         <div class="ref-section">
-            <div class="ref-title">Referências Científicas</div>
-            <img src="referencias-print.png" alt="Estudos Científicos" class="ref-img">
+            <div class="ref-title">Referências Bibliográficas</div>
+            <img src="img-footer.png" alt="logo-embaixo-do-video" class="ref-img">
         </div>
     </div>
 
@@ -148,29 +162,8 @@
             Tudo começa antes mesmo da tigela e da batedeira. Começa com um desejo: celebrar um aniversário, acolher uma visita, marcar uma conquista, ou simplesmente preencher a casa com um aroma que é, em si, um abraço. A escolha do bolo já é uma narrativa. Um bolo de laranja, úmido e singelo, fala de tardes ensolaradas e simplicidade. Um red velvet, escarlate e revestido de cream cheese, é puro teatro, um espetáculo de cores e texturas. O chocolate, por sua vez, é uma linguagem universal de luxúria e consolo. A receita, portanto, é primeiro um roteiro para uma emoção desejada.
         </p>
         <p>
-            <strong>Os Elementos Primordiais: Uma Análise dos Ingredientes</strong><br>
-            Cada ingrediente é um personagem com sua própria biografia. A farinha de trigo, o esqueleto da estrutura, é produto de milênios de agricultura e seleção. Seu glúten, uma rede proteica que se forma ao ser hidratado e trabalhado, será a responsável por reter os gases da fermentação, dando corpo e textura. A escolha entre farinhas mais ou menos refinadas é uma escolha entre leveza e rusticidade. O açúcar, outrora especiaria rara e agora commodity onipresente, é muito mais que um simples adoçante. É um umectante (retenção de umidade), um amaciante (interfere na formação do glúten, tornando a massa mais tenra) e, quando caramelizado, um complexificador de sabor. A gordura (manteiga, óleo, margarina) é a vetora de sabor e a responsável pela maciez. A manteiga, com seus sólidos lácteos e água, contribui para a estrutura e um sabor inigualável; o óleo, 100% gordura, garante uma umidade profunda e duradoura. Os ovos são o grande conciliador. A gema, rica em gordura e lecitina, é um emulsificante natural, permitindo que água e gordura, inimigos naturais, convivam em harmonia. A clara, quando batida, incorpora ar, atuando como um agente de crescimento físico, leve como uma nuvem.
-            O fermento químico (ou bicarbonato de sódio com um ácido) é o sopro mágico. Sua reação, liberando dióxido de carbono no calor do forno, é um pequeno milagre da química doméstica, inflando a massa e tornando-a palatável. O leite ou outro líquido (café, suco) é o veículo, o elemento que harmoniza e hidrata a mistura seca. Por fim, o sal – nunca o subestime. Ele é o realçador, o condutor de sinfonia que equilibra a doçura e faz todos os outros sabores cantarem com mais clareza.
-        </p>
-        <p>
-            <strong>O Ritual do Preparo: Técnica como Filosofia</strong><br>
-            Aqui, a receita deixa de ser uma lista e se torna coreografia. O método de preparo é uma filosofia. O método cremoso (gordura e açúcar batidos até o ponto de “clarear e ficar fofo”) incorpora ar microscopicamente, criando uma textura fina e aberta. É um método de paciência e observação. O método “no liquidificador” ou “tudo junto” é democrático e rápido, apelando para a praticidade e para a ação do glúten que se forma no processo de trituração. O método merengue (claras em neve incorporadas no final) é a busca pela máxima leveza, um toque de alta costura na confeitaria caseira.
-            Cada gesto tem importância. Peneirar a farinha não é frescura; é aerar e descompactar, garantindo uma medição mais precisa e uma incorporação sem grumos. Untar e enfarinhar a forma é um ato de premeditação e cuidado, uma barreira contra a frustração de um bolo que não desenforma. A temperatura dos ingredientes é crucial: a manteiga em ponto pomada (maleável, mas não derretida) emulsifica melhor; os ovos em temperatura ambiente incorporam-se mais homogeneamente, evitando que a gordura solidifique em pedacinhos e “quebre” a emulsão.
-        </p>
-        <p>
-            <strong>A Transformação pelo Fogo: A Fornalha Alquímica</strong><br>
-            O forno pré-aquecido é um non-negotiable. É o palco pronto para receber o ator. Colocar uma massa em um forno frio é condená-la a uma fermentação lenta e desigual, a uma textura pesada. O forno deve ser uma caverna de calor constante e controlado. A posição da grade é vital: muito embaixo, a base queima; muito em cima, o topo fica escuro enquanto o interior permanece cru. A magia acontece lá dentro: o fermento reage, criando bolhas; a gordura derrete, untando as fibras de glúten; o açúcar carameliza nas bordas; as proteínas dos ovos e do glúten coagulam, solidificando a estrutura que o ar tentava expandir; a reação de Maillard (o mesmo que doura um bife) ocorre na superfície, criando a casca dourada e perfumada. É um processo irreversível e dramático.
-        </p>
-        <p>
-            <strong>A Prova e a Espera: A Arte da Paciência</strong><br>
-            O teste do palito é um momento de tensão. Se sair limpo, a transformação está completa. Aqui, muitos falham na etapa mais crítica: a espera. Retirar o bolo da forma imediatamente é um erro de principiante. Ele precisa de um tempo para “descansar” e firmar sua estrutura, ainda frágil pelo calor. Depois de desenformado, precisa esfriar completamente. Aplicar uma calda ou um recheio em um bolo morno é um convite ao desastre: a cobertura derrete, o bolo desmancha. A paciência é um ingrediente invisível, mas essencial.
-            A Decoração e a Oferenda: O Simbolismo Final
-            Decorar um bolo é vesti-lo para uma ocasião. Pode ser um simples polvilhar de açúcar de confeiteiro, uma simplicidade elegante, ou um trabalho complexo com buttercream, pasta americana e corantes. É a personalização, a assinatura do confeiteiro. Mas, no fundo, a decoração é apenas a promessa do que está dentro. O ato final, o verdadeiro significado de todo o processo, é o compartilhamento. Cortar o bolo é um ritual de comunhão. Servir uma fatia é oferecer cuidado, é dizer “este tempo e esta dedicação foram para você”. O bolo é o centro da mesa, o ímã que reúne as pessoas, o pretexto para a conversa, o silêncio contemplativo entre uma garfada e outra.
-        </p>
-        <p>
             <strong>Conclusão: Mais que uma Receita, um Legado</strong><br>
-            Uma receita de bolo é, portanto, um documento vivo. Ela carrega em suas linhas a história das migrações do açúcar, a ciência coloidal, a evolução dos fornos e a psicologia do conforto. Ela é passada de geração em geração, adaptada (“na casa da minha avó, ela usava banha”), personalizada (“eu ponho uma colher de café solúvel para destacar o chocolate”). Cada bolo malhado, cada bolo que desaba, é uma lição. Cada bolo perfeito, fofo e saboroso, é uma pequena vitória.
-            Fazer um bolo é um ato de otimismo. É acreditar que há tempo para coisas boas, que vale a pena sujar tigelas, que há pessoas com quem compartilhar. É uma conexão tangível com nossos ancestrais que, em fogueiras ou fornos de barro, também buscavam transformar os frutos da terra em algo doce para celebrar a vida, apesar de tudo. Em um mundo cada vez mais rápido e virtual, o ritual lento, sensorial e generoso de fazer um bolo permanece como um ato de resistência humana, uma alquimia doméstica onde, no fim, o que se materializa não é apenas um alimento, mas um pedaço de tempo transformado em afeto sólido – e deliciosamente consumível.
+            Fazer um bolo é um ato de otimismo. É acreditar que há tempo para coisas boas, que vale a pena sujar tigelas, que há pessoas com quem compartilhar. É uma conexão tangível com nossos ancestrais que, em fogueiras ou fornos de barro, também buscavam transformar os frutos da terra em algo doce para celebrar a vida, apesar de tudo.
         </p>
     </div>
 
@@ -191,5 +184,31 @@
         <p style="margin-top: 15px;">© 2026 Todos os direitos reservados.</p>
     </div>
 
+    <script>
+        // Função para gerar data atual (DD/MM/AAAA)
+        function getTodayDate() {
+            const date = new Date();
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const year = date.getFullYear();
+            return `${day}/${month}/${year}`;
+        }
+
+        // Função para gerar número aleatório entre 600 e 1200
+        function getRandomViewers() {
+            return Math.floor(Math.random() * (1200 - 600 + 1)) + 600;
+        }
+
+        // Aplicar na tela
+        document.addEventListener("DOMContentLoaded", function() {
+            // Atualiza data
+            const dateElement = document.getElementById('limit-date');
+            if(dateElement) dateElement.textContent = getTodayDate();
+
+            // Atualiza visualizadores
+            const viewersElement = document.getElementById('viewers-count');
+            if(viewersElement) viewersElement.textContent = getRandomViewers();
+        });
+    </script>
 </body>
 </html>
