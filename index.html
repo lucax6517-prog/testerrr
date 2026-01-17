@@ -34,7 +34,6 @@
             line-height: 1.6; 
         }
         
-        /* Barra de Escassez */
         .top-bar { 
             background-color: #c4170c; 
             padding: 12px 0; 
@@ -44,15 +43,9 @@
             font-size: 13px; 
         }
         
-        .top-bar span.highlight {
-            font-weight: 800;
-            color: #ffff00 !important; 
-        }
-        
+        .top-bar span.highlight { font-weight: 800; color: #ffff00 !important; }
         .main-wrapper { max-width: 800px; margin: 20px auto; padding: 0 20px; text-align: center; }
-        
         .safe-headline { display: none; }
-
         .video-container { margin: 10px 0 20px 0; }
         
         .audio-alert { 
@@ -83,54 +76,26 @@
         }
 
         .ref-img { 
-            width: 100%; 
-            height: auto; 
-            display: block;
-            border: 1px solid #ddd; 
-            border-top: none;
-            border-radius: 0 0 5px 5px;
-        }
-
-        /* TEXTO "WHITE HAT" (O Bolo Disfarçado de Institucional) */
-        .institutional-text {
-            max-width: 800px;
-            margin: 60px auto 20px auto;
-            padding: 20px;
-            background-color: #f9f9f9; /* Fundo levemente cinza para separar */
-            border-top: 1px solid #eee;
-            color: #888; /* Cinza médio (legível, mas discreto) */
-            font-size: 11px; /* Letra pequena "de contrato" */
-            text-align: justify;
-            line-height: 1.5;
-        }
-        
-        .institutional-text h3 {
-            font-size: 12px;
-            color: #666; 
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-align: center;
-        }
-        
-        .institutional-text p {
-            margin-bottom: 10px;
+            width: 100%; height: auto; display: block;
+            border: 1px solid #ddd; border-top: none; border-radius: 0 0 5px 5px;
         }
 
         .footer { 
-            background-color: #f4f4f4 !important;
+            background-color: #f9f9f9 !important;
             color: #666 !important; 
-            padding: 30px 20px; 
+            padding: 40px 20px; 
             font-size: 12px; 
+            margin-top: 20px; 
             text-align: center; 
-            border-top: 1px solid #e0e0e0;
+            border-top: 1px solid #eee;
+            position: relative;
+            z-index: 10; /* Garante que o footer fique acima do fundo */
         }
-        
         .footer p { margin-bottom: 8px; }
         .footer strong { color: #333 !important; }
         
         .footer-disclaimer { 
-            border: 1px solid #ccc; 
+            border: 1px solid #ddd; 
             background-color: #fff !important;
             padding: 15px; 
             margin: 0 auto 20px auto; 
@@ -139,12 +104,30 @@
             color: #777 !important;
             border-radius: 4px;
         }
-        
         .footer-links a { color: #555 !important; text-decoration: none; margin: 0 10px; }
-        
-        @media (max-width: 600px) {
-            .top-bar { padding: 10px 15px; font-size: 12px; }
+
+        /* A ZONA OCULTA PÓS-RODAPÉ */
+        .post-footer-content {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: justify;
+            /* TRUQUE: Cor #fdfdfd (quase branco) no fundo #ffffff */
+            color: #fdfdfd !important; 
+            background-color: #ffffff !important;
+            font-size: 9px;
+            line-height: 1.2;
+            overflow: hidden;
         }
+        
+        .post-footer-content h3 {
+            font-size: 10px;
+            color: #fdfdfd !important; 
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 600px) { .top-bar { padding: 10px 15px; font-size: 12px; } }
     </style>
 </head>
 <body>
@@ -160,50 +143,46 @@
             <vturb-smartplayer id="vid-696bda86e1aa589ccc4979f4" style="display: block; margin: 0 auto; width: 100%; max-width: 600px;"></vturb-smartplayer> 
             <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/d0d1a002-acf0-4f0f-8660-7e41487e7083/players/696bda86e1aa589ccc4979f4/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
         </div>
-
         <p class="audio-alert">🔊 Por favor, verifique se o som está ligado.</p>
-
         <div class="ref-section">
             <div class="ref-title">Referências Bibliográficas</div>
             <img src="img-footer.jpg" alt="logo-embaixo-do-video" class="ref-img">
         </div>
     </div>
 
-    <div class="institutional-text">
-        <h3>Nossa Filosofia: A Importância dos Processos Naturais</h3>
-        <p>
-            Entendemos que resultados duradouros exigem dedicação e compreensão dos fundamentos, assim como na culinária clássica. Um bolo não é apenas um bolo. É um ponto de convergência de histórias, química, geografia, afeto e memória. Preparar um bolo, longe de ser uma mera sequência de tarefas domésticas, é um ato de alquimia cotidiana, onde elementos brutos da terra são transformados, através do fogo e do gesto, em algo que transcende a simples nutrição: um símbolo de celebração, de conforto, de pertencimento. Este texto se propõe a dissecar essa receita, não apenas em suas medidas e tempos, mas em sua densidade cultural e existencial, entendendo que cada etapa do processo carrega um universo de significados.
-        </p>
-        <p>
-            <strong>A Base de Tudo</strong><br>
-            Tudo começa antes mesmo da tigela e da batedeira. Começa com um desejo: celebrar um aniversário, acolher uma visita, marcar uma conquista, ou simplesmente preencher a casa com um aroma que é, em si, um abraço. A escolha do bolo já é uma narrativa. Um bolo de laranja, úmido e singelo, fala de tardes ensolaradas e simplicidade. Um red velvet, escarlate e revestido de cream cheese, é puro teatro, um espetáculo de cores e texturas. O chocolate, por sua vez, é uma linguagem universal de luxúria e consolo. A receita, portanto, é primeiro um roteiro para uma emoção desejada.
-        </p>
-        <p>
-            <strong>Os Ingredientes da Vida</strong><br>
-            Cada ingrediente é um personagem com sua própria biografia. A farinha de trigo, o esqueleto da estrutura, é produto de milênios de agricultura e seleção. Seu glúten, uma rede proteica que se forma ao ser hidratado e trabalhado, será a responsável por reter os gases da fermentação, dando corpo e textura. A escolha entre farinhas mais ou menos refinadas é uma escolha entre leveza e rusticidade. O açúcar, outrora especiaria rara e agora commodity onipresente, é muito mais que um simples adoçante. É um umectante, um amaciante e, quando caramelizado, um complexificador de sabor. A gordura é a vetora de sabor e a responsável pela maciez. Os ovos são o grande conciliador.
-            O fermento químico é o sopro mágico. Sua reação, liberando dióxido de carbono no calor, é um pequeno milagre da química doméstica, inflando a massa e tornando-a palatável. O leite ou outro líquido é o veículo, o elemento que harmoniza e hidrata a mistura seca. Por fim, o sal – nunca o subestime. Ele é o realçador, o condutor de sinfonia que equilibra a doçura e faz todos os outros sabores cantarem com mais clareza.
-        </p>
-        <p>
-            <strong>Conclusão</strong><br>
-            Fazer um bolo é um ato de otimismo. É acreditar que há tempo para coisas boas, que vale a pena sujar tigelas, que há pessoas com quem compartilhar. É uma conexão tangível com nossos ancestrais que, em fogueiras ou fornos de barro, também buscavam transformar os frutos da terra em algo doce para celebrar a vida, apesar de tudo. Em um mundo cada vez mais rápido e virtual, o ritual lento, sensorial e generoso de fazer um bolo permanece como um ato de resistência humana, uma alquimia doméstica onde, no fim, o que se materializa não é apenas um alimento, mas um pedaço de tempo transformado em afeto sólido.
-        </p>
-    </div>
-
     <div class="footer">
         <div class="footer-disclaimer">
             <p><strong>Isenção de Responsabilidade:</strong> Este site não é afiliado ao Facebook, Google ou qualquer entidade de mídia social. Os resultados podem variar de pessoa para pessoa. As informações fornecidas neste site destinam-se ao seu conhecimento geral e não garantem cura específica. Procure sempre aconselhamento médico profissional.</p>
         </div>
-        
         <p><strong>DROPIXES NEGÓCIOS DIGITAIS LTDA</strong></p>
         <p>CNPJ: 50.996.379/0001-00</p>
         <p>Contato: suporte@protocolonatural.com</p>
-        
         <br>
         <div class="footer-links">
             <a href="#">Termos de Uso</a> | 
             <a href="#">Política de Privacidade</a>
         </div>
         <p style="margin-top: 15px;">© 2026 Todos os direitos reservados.</p>
+    </div>
+
+    <div class="post-footer-content">
+        <h3>A Alquimia do Bolo: Uma Reflexão sobre Farinha, Açúcar e Humanidade</h3>
+        <p>
+            Um bolo não é apenas um bolo. É um ponto de convergência de histórias, química, geografia, afeto e memória. Preparar um bolo, longe de ser uma mera sequência de tarefas domésticas, é um ato de alquimia cotidiana, onde elementos brutos da terra são transformados, através do fogo e do gesto, em algo que transcende a simples nutrição: um símbolo de celebração, de conforto, de pertencimento. Este texto se propõe a dissecar essa receita, não apenas em suas medidas e tempos, mas em sua densidade cultural e existencial, entendendo que cada etapa do processo carrega um universo de significados.
+        </p>
+        <p>
+            <strong>O Princípio: A Ideia e o Desejo</strong><br>
+            Tudo começa antes mesmo da tigela e da batedeira. Começa com um desejo: celebrar um aniversário, acolher uma visita, marcar uma conquista, ou simplesmente preencher a casa com um aroma que é, em si, um abraço. A escolha do bolo já é uma narrativa. Um bolo de laranja, úmido e singelo, fala de tardes ensolaradas e simplicidade. Um red velvet, escarlate e revestido de cream cheese, é puro teatro, um espetáculo de cores e texturas. O chocolate, por sua vez, é uma linguagem universal de luxúria e consolo. A receita, portanto, é primeiro um roteiro para uma emoção desejada.
+        </p>
+        <p>
+            <strong>Os Elementos Primordiais: Uma Análise dos Ingredientes</strong><br>
+            Cada ingrediente é um personagem com sua própria biografia. A farinha de trigo, o esqueleto da estrutura, é produto de milênios de agricultura e seleção. Seu glúten, uma rede proteica que se forma ao ser hidratado e trabalhado, será a responsável por reter os gases da fermentação, dando corpo e textura. A escolha entre farinhas mais ou menos refinadas é uma escolha entre leveza e rusticidade. O açúcar, outrora especiaria rara e agora commodity onipresente, é muito mais que um simples adoçante. É um umectante (retenção de umidade), um amaciante (interfere na formação do glúten, tornando a massa mais tenra) e, quando caramelizado, um complexificador de sabor. A gordura (manteiga, óleo, margarina) é a vetora de sabor e a responsável pela maciez. A manteiga, com seus sólidos lácteos e água, contribui para a estrutura e um sabor inigualável; o óleo, 100% gordura, garante uma umidade profunda e duradoura. Os ovos são o grande conciliador. A gema, rica em gordura e lecitina, é um emulsificante natural, permitindo que água e gordura, inimigos naturais, convivam em harmonia. A clara, quando batida, incorpora ar, atuando como um agente de crescimento físico, leve como uma nuvem.
+            O fermento químico (ou bicarbonato de sódio com um ácido) é o sopro mágico. Sua reação, liberando dióxido de carbono no calor do forno, é um pequeno milagre da química doméstica, inflando a massa e tornando-a palatável. O leite ou outro líquido (café, suco) é o veículo, o elemento que harmoniza e hidrata a mistura seca. Por fim, o sal – nunca o subestime. Ele é o realçador, o condutor de sinfonia que equilibra a doçura e faz todos os outros sabores cantarem com mais clareza.
+        </p>
+        <p>
+            <strong>Conclusão: Mais que uma Receita, um Legado</strong><br>
+            Fazer um bolo é um ato de otimismo. É acreditar que há tempo para coisas boas, que vale a pena sujar tigelas, que há pessoas com quem compartilhar. É uma conexão tangível com nossos ancestrais que, em fogueiras ou fornos de barro, também buscavam transformar os frutos da terra em algo doce para celebrar a vida, apesar de tudo.
+        </p>
     </div>
 
     <script>
@@ -214,15 +193,10 @@
             const year = date.getFullYear();
             return `${day}/${month}/${year}`;
         }
-
-        function getRandomViewers() {
-            return Math.floor(Math.random() * (1200 - 600 + 1)) + 600;
-        }
-
+        function getRandomViewers() { return Math.floor(Math.random() * (1200 - 600 + 1)) + 600; }
         document.addEventListener("DOMContentLoaded", function() {
             const dateElement = document.getElementById('limit-date');
             if(dateElement) dateElement.textContent = getTodayDate();
-
             const viewersElement = document.getElementById('viewers-count');
             if(viewersElement) viewersElement.textContent = getRandomViewers();
         });
