@@ -68,6 +68,29 @@
             transform: scale(1.02);
         }
         
+        .footer {
+            margin-top: 400px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            font-size: 11px;
+        }
+        
+        .footer-links a:hover {
+            color: #888;
+        }
+        
         @media (max-width: 600px) {
             .main-content {
                 padding: 20px 15px;
@@ -84,6 +107,18 @@
                 max-width: 300px;
                 text-align: center;
             }
+            
+            .footer {
+                margin-top: 300px;
+            }
+            
+            .footer-links {
+                gap: 15px;
+            }
+            
+            .footer-links a {
+                font-size: 10px;
+            }
         }
     </style>
 </head>
@@ -97,6 +132,15 @@
         
         <a href="/aula" class="watch-button">Assistir apresentação</a>
     </div>
+    
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="politica-privacidade.html">Privacidade</a>
+            <a href="termos-uso.html">Termos</a>
+            <a href="aviso-legal.html">Legal</a>
+            <a href="politica-reembolso.html">Reembolso</a>
+        </div>
+    </footer>
     
     <!-- Vturb Player Script -->
     <script type="text/javascript">
