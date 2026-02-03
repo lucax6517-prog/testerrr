@@ -23,53 +23,86 @@
         }
         
         body {
-            font-family: Arial, sans-serif;
-            background-color: #e8e8e8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             min-height: 100vh;
+            background: linear-gradient(180deg, #1a0a0a 0%, #4a0f0f 30%, #6b1515 60%, #4a0f0f 100%);
+            background-attachment: fixed;
         }
         
         .main-content {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
+            min-height: 100vh;
         }
         
         .video-container {
             width: 100%;
-            max-width: 800px;
-            margin-bottom: 30px;
+            max-width: 750px;
+            margin-bottom: 40px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .video-container vturb-smartplayer {
+            display: block;
+            width: 100%;
         }
         
         .presentation-text {
-            font-size: 22px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 20px;
+            font-size: 32px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 35px;
             text-align: center;
+            line-height: 1.4;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .presentation-text .highlight {
+            color: #ff4444;
+            font-weight: 700;
         }
         
         .watch-button {
-            background-color: #d32f2f;
+            background: linear-gradient(180deg, #e53935 0%, #c62828 100%);
             color: white;
             font-size: 18px;
-            font-weight: bold;
-            padding: 16px 40px;
+            font-weight: 600;
+            padding: 18px 50px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            transition: all 0.3s ease;
             text-decoration: none;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 25px rgba(229, 57, 53, 0.4);
         }
         
         .watch-button:hover {
-            background-color: #b71c1c;
-            transform: scale(1.02);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(229, 57, 53, 0.5);
+            background: linear-gradient(180deg, #ef5350 0%, #d32f2f 100%);
+        }
+        
+        .watch-button svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .watch-button:hover svg {
+            transform: translateX(4px);
         }
         
         .footer {
-            margin-top: 400px;
+            margin-top: 350px;
             padding: 20px;
             text-align: center;
         }
@@ -82,34 +115,40 @@
         }
         
         .footer-links a {
-            color: #bbb;
+            color: rgba(255, 255, 255, 0.3);
             text-decoration: none;
             font-size: 11px;
         }
         
         .footer-links a:hover {
-            color: #888;
+            color: rgba(255, 255, 255, 0.5);
         }
         
         @media (max-width: 600px) {
             .main-content {
-                padding: 20px 15px;
+                padding: 30px 15px;
+            }
+            
+            .video-container {
+                border-radius: 12px;
+                margin-bottom: 30px;
             }
             
             .presentation-text {
-                font-size: 18px;
+                font-size: 22px;
+                margin-bottom: 25px;
             }
             
             .watch-button {
                 font-size: 16px;
-                padding: 14px 30px;
+                padding: 16px 35px;
                 width: 100%;
-                max-width: 300px;
-                text-align: center;
+                max-width: 320px;
+                justify-content: center;
             }
             
             .footer {
-                margin-top: 300px;
+                margin-top: 250px;
             }
             
             .footer-links {
@@ -128,9 +167,14 @@
             <vturb-smartplayer id="vid-698265ff9f4a0b25f3accbc4" style="display: block; margin: 0 auto; width: 100%;"></vturb-smartplayer>
         </div>
         
-        <p class="presentation-text">Sua apresentação gratuita está pronta!</p>
+        <p class="presentation-text">Clique no botão abaixo para assistir a<br>apresentação <span class="highlight">GRATUITA!</span></p>
         
-        <a href="/aula" class="watch-button">Assistir apresentação</a>
+        <a href="/aula" class="watch-button" id="ctaButton">
+            ASSISTIR AGORA
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+        </a>
     </div>
     
     <footer class="footer">
@@ -148,6 +192,28 @@
         s.src = "https://scripts.converteai.net/d0d1a002-acf0-4f0f-8660-7e41487e7083/players/698265ff9f4a0b25f3accbc4/v4/player.js";
         s.async = !0;
         document.head.appendChild(s);
+    </script>
+    
+    <!-- URL Parameters Forwarding (gclid, utm, etc) -->
+    <script>
+        (function() {
+            const currentParams = window.location.search;
+            
+            if (currentParams) {
+                const ctaButton = document.getElementById('ctaButton');
+                const baseUrl = ctaButton.getAttribute('href');
+                ctaButton.setAttribute('href', baseUrl + currentParams);
+                
+                // Also update footer links
+                const footerLinks = document.querySelectorAll('.footer-links a');
+                footerLinks.forEach(function(link) {
+                    const linkHref = link.getAttribute('href');
+                    if (!linkHref.startsWith('http')) {
+                        link.setAttribute('href', linkHref + currentParams);
+                    }
+                });
+            }
+        })();
     </script>
 </body>
 </html>
