@@ -1,176 +1,163 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#ffffff">
-    <title>Masterclass - Método Exclusivo</title>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17873478836"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-17873478836');
-    </script>
+    <title>Watch Now</title>
     
+    <!-- Performance preload scripts -->
     <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
-    <link rel="preload" href="https://scripts.converteai.net/d0d1a002-acf0-4f0f-8660-7e41487e7083/players/696e5448e1aa589ccc4c6dbb/v4/player.js" as="script">
+    <link rel="preload" href="https://scripts.converteai.net/d0d1a002-acf0-4f0f-8660-7e41487e7083/players/69821999ceab7d624d45c3d0/v4/player.js" as="script">
     <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
-    <link rel="preload" href="https://cdn.converteai.net/d0d1a002-acf0-4f0f-8660-7e41487e7083/696e5286b5b7b3215a73b846/main.m3u8" as="fetch">
+    <link rel="preload" href="https://cdn.converteai.net/d0d1a002-acf0-4f0f-8660-7e41487e7083/6982195e664ebd56a21ac3b4/main.m3u8" as="fetch">
     <link rel="dns-prefetch" href="https://cdn.converteai.net">
     <link rel="dns-prefetch" href="https://scripts.converteai.net">
     <link rel="dns-prefetch" href="https://images.converteai.net">
     <link rel="dns-prefetch" href="https://api.vturb.com.br">
-
+    
     <style>
-        :root { color-scheme: light; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         
-        body { 
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-            background-color: #FFFFFF; 
-            color: #333; 
-            line-height: 1.6; 
-            display: flex;
-            flex-direction: column;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8e8e8;
             min-height: 100vh;
         }
         
-        .top-bar { 
-            background-color: #c4170c; 
-            padding: 12px 0; 
-            text-align: center; 
-            color: white; 
-            font-weight: 600; 
-            font-size: 13px; 
-        }
-        
-        .top-bar span.highlight { font-weight: 800; color: #ffff00; }
-        
-        .main-wrapper { 
-            max-width: 800px; 
-            margin: 20px auto; 
-            padding: 0 20px; 
-            text-align: center; 
-            flex: 1; 
-        }
-        
-        .video-container { margin: 10px 0 20px 0; }
-        
-        .audio-alert { 
-            background: #f0f2f5; 
-            padding: 10px; 
-            border-radius: 5px; 
-            font-size: 14px; 
-            display: inline-block; 
-            margin-top: 5px; 
-            color: #555;
-        }
-
-        .ref-section { 
-            margin-top: 40px; 
-            text-align: center; 
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .ref-title {
-            background-color: rgb(59, 89, 152);
+        .header-bar {
+            background-color: #d32f2f;
             color: white;
-            padding: 10px;
-            border-radius: 5px 5px 0 0;
-            font-weight: 600;
-            font-size: 16px;
+            text-align: center;
+            padding: 12px 20px;
         }
-
-        .ref-img { 
-            width: 100%; height: auto; display: block;
-            border: 1px solid #ddd; border-top: none; border-radius: 0 0 5px 5px;
-        }
-
-        .footer { 
-            background-color: #f9f9f9;
-            color: #666; 
-            padding: 40px 20px; 
-            font-size: 12px; 
-            margin-top: 40px; 
-            text-align: center; 
-            border-top: 1px solid #eee;
-        }
-        .footer p { margin-bottom: 8px; }
-        .footer strong { color: #333; }
         
-        .footer-disclaimer { 
-            border: 1px solid #ddd; 
-            background-color: #fff;
-            padding: 15px; 
-            margin: 0 auto 20px auto; 
-            max-width: 700px; 
-            font-size: 11px; 
-            color: #777;
-            border-radius: 4px;
+        .viewer-count {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 4px;
         }
-        .footer-links a { color: #555; text-decoration: none; margin: 0 10px; }
-
-        @media (max-width: 600px) { .top-bar { padding: 10px 15px; font-size: 12px; } }
+        
+        .deadline-text {
+            font-size: 14px;
+            color: #ffeb3b;
+        }
+        
+        .deadline-date {
+            color: #ffeb3b;
+            font-weight: bold;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+        
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+        
+        .sound-notice {
+            background-color: #fff9c4;
+            border-left: 4px solid #d32f2f;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            color: #333;
+            max-width: 800px;
+            width: 100%;
+        }
+        
+        .sound-icon {
+            font-size: 20px;
+        }
+        
+        @media (max-width: 600px) {
+            .viewer-count {
+                font-size: 16px;
+            }
+            
+            .deadline-text {
+                font-size: 12px;
+            }
+            
+            .main-content {
+                padding: 20px 15px;
+            }
+            
+            .sound-notice {
+                font-size: 14px;
+                padding: 12px 15px;
+            }
+        }
     </style>
 </head>
 <body>
-
-    <div class="top-bar">
-        <span id="viewers-count" class="highlight">...</span> pessoas assistindo.
-        <br style="display:none;" class="mobile-break">
-        Devido a alta demanda, garantimos a apresentação somente até: <span id="limit-date" class="highlight">...</span>
+    <div class="header-bar">
+        <div class="viewer-count"><span id="viewerCount">729</span> People are watching this video</div>
+        <div class="deadline-text">Due to high demand, we guarantee this presentation only until: <span class="deadline-date" id="currentDate"></span></div>
     </div>
-
-    <div class="main-wrapper">
+    
+    <div class="main-content">
         <div class="video-container">
-            <vturb-smartplayer id="vid-696e5448e1aa589ccc4c6dbb" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer> 
-            <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/d0d1a002-acf0-4f0f-8660-7e41487e7083/players/696e5448e1aa589ccc4c6dbb/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+            <vturb-smartplayer id="vid-69821999ceab7d624d45c3d0" style="display: block; margin: 0 auto; width: 100%;"></vturb-smartplayer>
         </div>
-
-        <p class="audio-alert">🔊 Por favor, verifique se o som está ligado.</p>
         
-        <div class="ref-section">
-            <div class="ref-title">Referências em Mídia</div>
-            <img src="image-footer.jpg" alt="midia" class="ref-img">
+        <div class="sound-notice">
+            <span class="sound-icon">🔊</span>
+            <span>Please make sure your sound is turned on.</span>
         </div>
     </div>
-
-    <div class="footer">
-        <div class="footer-disclaimer">
-            <p><strong>Isenção de Responsabilidade:</strong> Este site não é afiliado ao Facebook, Google ou qualquer entidade de mídia social. Os resultados podem variar de pessoa para pessoa. As informações fornecidas neste site destinam-se ao seu conhecimento geral.</p>
-        </div>
-        
-        <p><strong>DROPIXES NEGÓCIOS DIGITAIS LTDA</strong></p>
-        <p>CNPJ: 50.996.379/0001-00</p>
-        <p>Contato: suporte@protocolonatural.com</p>
-        
-        <br>
-        <div class="footer-links">
-            <a href="#">Termos de Uso</a> | 
-            <a href="#">Política de Privacidade</a>
-        </div>
-        <p style="margin-top: 15px;">© 2026 Todos os direitos reservados.</p>
-    </div>
-
+    
+    <!-- Vturb Player Script -->
+    <script type="text/javascript">
+        var s = document.createElement("script");
+        s.src = "https://scripts.converteai.net/d0d1a002-acf0-4f0f-8660-7e41487e7083/players/69821999ceab7d624d45c3d0/v4/player.js";
+        s.async = !0;
+        document.head.appendChild(s);
+    </script>
+    
     <script>
-        function getTodayDate() {
-            const date = new Date();
-            const day = String(date.getDate()).padStart(2, '0');
-            const month = String(date.getMonth() + 1).padStart(2, '0');
-            const year = date.getFullYear();
-            return `${day}/${month}/${year}`;
+        // Set current date in MM/DD/YYYY format
+        function setCurrentDate() {
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, '0');
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const year = today.getFullYear();
+            document.getElementById('currentDate').textContent = `${month}/${day}/${year}`;
         }
-        function getRandomViewers() { return Math.floor(Math.random() * (1200 - 600 + 1)) + 600; }
-        document.addEventListener("DOMContentLoaded", function() {
-            const dateElement = document.getElementById('limit-date');
-            if(dateElement) dateElement.textContent = getTodayDate();
-            const viewersElement = document.getElementById('viewers-count');
-            if(viewersElement) viewersElement.textContent = getRandomViewers();
-        });
+        
+        // Random viewer count between 700 and 1000
+        function updateViewerCount() {
+            const min = 700;
+            const max = 1000;
+            const randomCount = Math.floor(Math.random() * (max - min + 1)) + min;
+            document.getElementById('viewerCount').textContent = randomCount;
+        }
+        
+        // Initialize
+        setCurrentDate();
+        updateViewerCount();
+        
+        // Update viewer count every 3-8 seconds randomly
+        function scheduleNextUpdate() {
+            const delay = Math.floor(Math.random() * 5000) + 3000; // 3-8 seconds
+            setTimeout(() => {
+                updateViewerCount();
+                scheduleNextUpdate();
+            }, delay);
+        }
+        
+        scheduleNextUpdate();
     </script>
 </body>
 </html>
