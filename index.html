@@ -3,701 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5RHJ85LC');</script>
-    <!-- End Google Tag Manager -->
-
-    <title>Protocolo Natural</title>
+    <title>Apresentação Gratuita</title>
     
-    <!-- Vturb Performance Optimization -->
+    <!-- Google Ads Conversion Tracking Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17873453372"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17873453372');
+    </script>
+    
+    <!-- Performance preload scripts -->
     <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
-    <link rel="preload" href="https://scripts.converteai.net/d0d1a002-acf0-4f0f-8660-7e41487e7083/players/6982a7d39a64dd1a27bdc7f8/v4/player.js" as="script">
+    <link rel="preload" href="https://scripts.converteai.net/d0d1a002-acf0-4f0f-8660-7e41487e7083/players/698265ff9f4a0b25f3accbc4/v4/player.js" as="script">
     <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
-    <link rel="preload" href="https://cdn.converteai.net/d0d1a002-acf0-4f0f-8660-7e41487e7083/69812e7d0d9bb07e86a7287a/main.m3u8" as="fetch">
+    <link rel="preload" href="https://cdn.converteai.net/d0d1a002-acf0-4f0f-8660-7e41487e7083/698265fcd87f83f582d45bbc/main.m3u8" as="fetch">
     <link rel="dns-prefetch" href="https://cdn.converteai.net">
     <link rel="dns-prefetch" href="https://scripts.converteai.net">
     <link rel="dns-prefetch" href="https://images.converteai.net">
     <link rel="dns-prefetch" href="https://api.vturb.com.br">
-
+    
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #FFFFFF;
-            color: rgb(26, 26, 26);
-            line-height: 1.6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(180deg, #1a0a0a 0%, #4a0f0f 30%, #6b1515 60%, #4a0f0f 100%);
+            background-attachment: fixed;
         }
-
-        .top-bar {
-            background-color: rgb(196, 23, 12);
-            border: 0;
-            padding: 16px 0;
-            text-align: center;
-            width: 100%;
-        }
-
-        .wrapper-top {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .live-stats {
-            font-size: 15px;
-            color: #ffffff;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .live-stats .qty {
-            color: #ffffff;
-            font-weight: 700;
-        }
-
-        .info-alert {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.95);
-        }
-
-        .info-alert .limit-date {
-            color: #ffffff;
-            font-weight: 700;
-        }
-
-        .main-wrapper {
-            max-width: 800px;
-            margin: 24px auto;
-            padding: 0 20px;
-        }
-
-        .primary-img {
-            display: none; 
-        }
-
-        .media-wrapper {
-            margin: 24px 0;
-            display: block;
-        }
-
-        .audio-alert {
-            margin-top: 12px;
-            padding: 12px;
-            background-color: rgb(240, 242, 245);
-            border-radius: 8px;
-            font-size: 15px;
-            color: rgb(26, 26, 26);
-            text-align: center;
-        }
-
-        .ref-box {
-            margin: 32px auto;
-            max-width: 500px;
-        }
-
-        .ref-head {
-            background-color: rgb(59, 89, 152);
-            color: white;
-            padding: 12px 20px;
-            border-radius: 8px 8px 0 0;
-            text-align: center;
-            font-size: 18px;
-            font-weight: 600;
-        }
-
-        .ref-img {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-            display: block;
-            background-color: rgb(240, 242, 245);
-            padding: 20px;
-            border-radius: 0 0 8px 8px;
-        }
-
-        /* ===== SEÇÃO DE OFERTAS ===== */
-        .ofertas-section {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .kit-container {
-            background: linear-gradient(180deg, #1a5a7a 0%, #0d3d54 100%);
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            width: 260px;
-            color: white;
-            position: relative;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .kit-destaque {
-            border: 3px solid #FFD700;
-            transform: scale(1.05);
-        }
-
-        .kit-badge {
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #c4170c;
-            color: white;
-            padding: 5px 20px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        .kit-titulo {
-            font-size: 28px;
-            font-weight: 700;
-            color: #FFD700;
-            margin-top: 15px;
-            margin-bottom: 5px;
-        }
-
-        .kit-subtitulo {
-            font-size: 14px;
-            color: #ffffff;
-            margin-bottom: 15px;
-        }
-
-        .kit-imagem {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-            margin: 10px auto;
-        }
-
-        .kit-preco {
-            margin: 15px 0;
-        }
-
-        .kit-parcela {
-            font-size: 16px;
-            color: #ffffff;
-            display: block;
-        }
-
-        .kit-valor {
-            font-size: 36px;
-            font-weight: 700;
-            color: #FFD700;
-        }
-
-        .kit-botao {
-            display: block;
-            background-color: #FFD700;
-            color: #000000;
-            padding: 15px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 14px;
-            margin: 10px auto;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .kit-botao:hover {
-            background-color: #ffec4d;
-            transform: scale(1.02);
-        }
-
-        .kit-botao-pix {
-            background-color: #32BCAD;
-            color: #ffffff;
-        }
-
-        .kit-botao-pix:hover {
-            background-color: #28a699;
-        }
-
-        .kit-total {
-            font-size: 14px;
-            color: #ffffff;
-            margin: 5px 0;
-        }
-
-        .kit-frete {
-            font-size: 13px;
-            color: #90EE90;
-            margin: 5px 0;
-        }
-
-        .kit-garantia {
-            font-size: 13px;
-            color: #ffffff;
-            margin: 10px 0;
-            padding: 8px;
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 5px;
-        }
-
-        .kit-bandeiras {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-            margin-top: 10px;
-        }
-
-        /* ===== SEÇÃO GARANTIA BLINDADA ===== */
-        .garantia-section {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-
-        .garantia-container {
-            background-color: #FFF8DC;
-            border-radius: 12px;
-            padding: 30px;
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .garantia-imagem {
-            flex-shrink: 0;
-        }
-
-        .garantia-imagem img {
-            max-width: 250px;
-            height: auto;
-        }
-
-        .garantia-titulo {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1a5a7a;
-            margin-bottom: 15px;
-        }
-
-        .garantia-texto p {
-            font-size: 15px;
-            color: #333;
-            margin-bottom: 12px;
-            line-height: 1.6;
-        }
-
-        .garantia-texto strong {
-            color: #1a5a7a;
-        }
-
-        /* ===== SEÇÃO FAQ ===== */
-        .faq-section {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 40px 20px;
-            background: linear-gradient(180deg, #1a5a7a 0%, #0d4a63 100%);
-            border-radius: 12px;
-        }
-
-        .faq-titulo {
-            text-align: center;
-            color: #ffffff;
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 30px;
-            letter-spacing: 2px;
-        }
-
-        .faq-container {
+        
+        .main-content {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            align-items: center;
+            padding: 50px 20px;
+            min-height: 100vh;
         }
-
-        .faq-item {
-            background-color: #ffffff;
-            border-radius: 8px;
-            border-left: 5px solid #FFD700;
+        
+        .video-container {
+            width: 100%;
+            max-width: 750px;
+            margin-bottom: 40px;
+            border-radius: 16px;
             overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
-
-        .faq-pergunta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 20px;
-            cursor: pointer;
+        
+        .video-container vturb-smartplayer {
+            display: block;
+            width: 100%;
+        }
+        
+        .presentation-text {
+            font-size: 32px;
             font-weight: 600;
-            font-size: 16px;
-            color: #1a1a1a;
+            color: #ffffff;
+            margin-bottom: 35px;
+            text-align: center;
+            line-height: 1.4;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
-
-        .faq-icon {
-            background-color: #FFD700;
-            color: #1a1a1a;
-            width: 28px;
-            height: 28px;
-            border-radius: 4px;
-            display: flex;
+        
+        .presentation-text .highlight {
+            color: #ff4444;
+            font-weight: 700;
+        }
+        
+        .watch-button {
+            background: linear-gradient(180deg, #e53935 0%, #c62828 100%);
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 18px 50px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            flex-shrink: 0;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 25px rgba(229, 57, 53, 0.4);
+        }
+        
+        .watch-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(229, 57, 53, 0.5);
+            background: linear-gradient(180deg, #ef5350 0%, #d32f2f 100%);
+        }
+        
+        .watch-button svg {
+            width: 20px;
+            height: 20px;
             transition: transform 0.3s ease;
         }
-
-        .faq-item.ativo .faq-icon {
-            transform: rotate(180deg);
+        
+        .watch-button:hover svg {
+            transform: translateX(4px);
         }
-
-        .faq-resposta {
-            padding: 0 20px 18px 20px;
-            font-size: 14px;
-            color: #333;
-            line-height: 1.6;
+        
+        .footer {
+            margin-top: 350px;
+            padding: 20px;
+            text-align: center;
         }
-
-        .faq-resposta p {
-            margin-bottom: 10px;
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
         }
-
-        .faq-resposta p:last-child {
-            margin-bottom: 0;
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.3);
+            text-decoration: none;
+            font-size: 11px;
         }
-
-        /* ===== RESPONSIVO ===== */
-        @media (max-width: 768px) {
-            .live-stats {
-                font-size: 14px;
-            }
-
-            .info-alert {
-                font-size: 13px;
-            }
-
-            .ofertas-section {
-                flex-direction: column;
-                align-items: center;
+        
+        .footer-links a:hover {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        @media (max-width: 600px) {
+            .main-content {
+                padding: 30px 15px;
             }
             
-            .kit-container {
+            .video-container {
+                border-radius: 12px;
+                margin-bottom: 30px;
+            }
+            
+            .presentation-text {
+                font-size: 22px;
+                margin-bottom: 25px;
+            }
+            
+            .watch-button {
+                font-size: 16px;
+                padding: 16px 35px;
                 width: 100%;
                 max-width: 320px;
+                justify-content: center;
             }
             
-            .kit-destaque {
-                transform: scale(1);
+            .footer {
+                margin-top: 250px;
             }
             
-            .garantia-container {
-                flex-direction: column;
-                text-align: center;
+            .footer-links {
+                gap: 15px;
             }
             
-            .garantia-imagem img {
-                max-width: 200px;
+            .footer-links a {
+                font-size: 10px;
             }
-
-            .faq-titulo {
-                font-size: 24px;
-            }
-            
-            .faq-pergunta {
-                font-size: 14px;
-                padding: 15px;
-            }
-            
-            .faq-resposta {
-                font-size: 13px;
-                padding: 0 15px 15px 15px;
-            }
-        }
-
-        .btm-bar {
-            background-color: rgb(26, 26, 26);
-            color: white;
-            padding: 48px 20px 24px;
-            margin-top: 64px;
-        }
-
-        .btm-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .btm-legal {
-            margin-top: 32px;
-            padding-top: 24px;
-            border-top: 1px solid #333;
-            text-align: center;
-            font-size: 14px;
-            color: #999;
         }
     </style>
 </head>
 <body>
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RHJ85LC"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <div class="top-bar">
-        <div class="wrapper-top">
-            <div class="live-stats">
-                <span class="qty" id="liveUserDisplay">...</span> Pessoas estão assistindo a esse vídeo.
-            </div>
-            <div class="info-alert">
-                Devido a alta demanda de acessos, garantimos a apresentação somente até: <span class="limit-date" id="limitDateDisplay">...</span>
-            </div>
+    <div class="main-content">
+        <div class="video-container">
+            <vturb-smartplayer id="vid-698265ff9f4a0b25f3accbc4" style="display: block; margin: 0 auto; width: 100%;"></vturb-smartplayer>
         </div>
+        
+        <p class="presentation-text">Clique no botão abaixo para assistir a<br>apresentação <span class="highlight">GRATUITA!</span></p>
+        
+        <a href="/aula" class="watch-button" id="ctaButton">
+            ASSISTIR AGORA
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+        </a>
     </div>
-
-    <div class="content-body">
-        <div class="main-wrapper">
-            <div class="content-box">
-                <div class="media-wrapper">
-                    <vturb-smartplayer id="vid-6982a7d39a64dd1a27bdc7f8" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>
-                    <script type="text/javascript">
-                        var s=document.createElement("script");
-                        s.src="https://scripts.converteai.net/d0d1a002-acf0-4f0f-8660-7e41487e7083/players/6982a7d39a64dd1a27bdc7f8/v4/player.js",
-                        s.async=!0,document.head.appendChild(s);
-                    </script>
-                    
-                    <p class="audio-alert">
-                        🔊 Por favor, verifique se o som está ligado.
-                    </p>
-                </div>
-
-                <!-- ===== SEÇÃO DE OFERTAS - SINCRONIZAR COM VTURB ===== -->
-                <!-- ID para VTurb: secao-ofertas | Tempo: 00:01:00 (teste) | Depois mudar para 00:43:29 -->
-                <section id="secao-ofertas" class="ofertas-section" style="display: none;">
-                    
-                    <!-- Kit 10 Meses -->
-                    <div class="kit-container kit-destaque">
-                        <div class="kit-badge">Mais vendido</div>
-                        <h3 class="kit-titulo">10 Frascos</h3>
-                        <p class="kit-subtitulo">Suficiente para 10 meses</p>
-                        <img src="produto-10-frascos.png" alt="Kit 10 Frascos Lord Vigor" class="kit-imagem">
-                        <div class="kit-preco">
-                            <span class="kit-parcela">12x de</span>
-                            <span class="kit-valor">R$ 58,08</span>
-                        </div>
-                        <a href="https://checkout.payt.com.br/d239e36e539c4056681d799900449474?split=12" class="kit-botao">COMPRAR AGORA VIA CARTÃO DE CRÉDITO</a>
-                        <a href="https://checkout.payt.com.br/d239e36e539c4056681d799900449474?payment=pix" class="kit-botao kit-botao-pix">COMPRAR AGORA VIA PIX</a>
-                        <p class="kit-total">Total: R$ 697,00</p>
-                        <p class="kit-frete">Frete Grátis 🚚</p>
-                        <p class="kit-garantia">Garantia de 600 dias</p>
-                        <img src="bandeiras-cartao.webp" alt="Bandeiras de Cartão" class="kit-bandeiras">
-                    </div>
-
-                    <!-- Kit 5 Meses -->
-                    <div class="kit-container">
-                        <h3 class="kit-titulo">5 Frascos</h3>
-                        <p class="kit-subtitulo">Suficiente para 5 meses</p>
-                        <img src="produto-5-frascos.jpg" alt="Kit 5 Frascos Lord Vigor" class="kit-imagem">
-                        <div class="kit-preco">
-                            <span class="kit-parcela">12x de</span>
-                            <span class="kit-valor">R$ 33,08</span>
-                        </div>
-                        <a href="https://checkout.payt.com.br/1d76e07dc1f876bff61c865007112c16?split=12" class="kit-botao">COMPRAR AGORA VIA CARTÃO DE CRÉDITO</a>
-                        <a href="https://checkout.payt.com.br/1d76e07dc1f876bff61c865007112c16?payment=pix" class="kit-botao kit-botao-pix">COMPRAR AGORA VIA PIX</a>
-                        <p class="kit-total">Total: R$ 397,00</p>
-                        <p class="kit-frete">Frete Grátis 🚚</p>
-                        <p class="kit-garantia">Garantia de 300 dias</p>
-                        <img src="bandeiras-cartao.webp" alt="Bandeiras de Cartão" class="kit-bandeiras">
-                    </div>
-
-                    <!-- Kit 3 Meses -->
-                    <div class="kit-container">
-                        <h3 class="kit-titulo">3 Frascos</h3>
-                        <p class="kit-subtitulo">Suficiente para 3 meses</p>
-                        <img src="produto-3-frascos.jpg" alt="Kit 3 Frascos Lord Vigor" class="kit-imagem">
-                        <div class="kit-preco">
-                            <span class="kit-parcela">12x de</span>
-                            <span class="kit-valor">R$ 24,75</span>
-                        </div>
-                        <a href="https://checkout.payt.com.br/7960b7e2252d3c21f57e5bd8cb19801a?split=12" class="kit-botao">COMPRAR AGORA VIA CARTÃO DE CRÉDITO</a>
-                        <a href="https://checkout.payt.com.br/7960b7e2252d3c21f57e5bd8cb19801a?payment=pix" class="kit-botao kit-botao-pix">COMPRAR AGORA VIA PIX</a>
-                        <p class="kit-total">Total: R$ 297,00</p>
-                        <p class="kit-frete">Frete Grátis 🚚</p>
-                        <p class="kit-garantia">Garantia de 180 dias</p>
-                        <img src="bandeiras-cartao.webp" alt="Bandeiras de Cartão" class="kit-bandeiras">
-                    </div>
-
-                    <!-- Kit 1 Mês -->
-                    <div class="kit-container">
-                        <h3 class="kit-titulo">1 Frasco</h3>
-                        <p class="kit-subtitulo">Suficiente para 1 mês</p>
-                        <img src="produto-1-frasco.jpg" alt="Kit 1 Frasco Lord Vigor" class="kit-imagem">
-                        <div class="kit-preco">
-                            <span class="kit-parcela">Por apenas</span>
-                            <span class="kit-valor">R$ 197,00</span>
-                        </div>
-                        <a href="https://checkout.payt.com.br/41fdf13bf63e3172e419af1e164ba4af?split=12" class="kit-botao">COMPRAR AGORA VIA CARTÃO DE CRÉDITO</a>
-                        <a href="https://checkout.payt.com.br/41fdf13bf63e3172e419af1e164ba4af?payment=pix" class="kit-botao kit-botao-pix">COMPRAR AGORA VIA PIX</a>
-                        <p class="kit-total">+ Frete</p>
-                        <p class="kit-garantia">Garantia de 60 dias</p>
-                        <img src="bandeiras-cartao.webp" alt="Bandeiras de Cartão" class="kit-bandeiras">
-                    </div>
-
-                </section>
-
-                <!-- ===== SEÇÃO GARANTIA BLINDADA ===== -->
-                <!-- ID para VTurb: garantia-blindada | Mesmo tempo que secao-ofertas -->
-                <section id="garantia-blindada" class="garantia-section" style="display: none;">
-                    <div class="garantia-container">
-                        <div class="garantia-imagem">
-                            <img src="produto-garantia.png" alt="Garantia Lord Vigor">
-                        </div>
-                        <div class="garantia-texto">
-                            <h2 class="garantia-titulo">GARANTIA BLINDADA LORD VIGOR</h2>
-                            <p>Quando você pedir o Lord Vigor, também receberá uma <strong>garantia blindada de 60 dias em cada frasco</strong> para solicitar todo o seu dinheiro de volta.</p>
-                            <p>Estamos tão confiantes que o Lord Vigor vai te trazer resultados, que se você não estiver 100% satisfeito e não notar uma grande melhora na sua qualidade de vida, <strong>nós vamos te devolver até o último centavo pago.</strong></p>
-                            <p>Basta enviar uma mensagem no WhatsApp em até 60 dias a partir da sua compra que faremos a devolução integral do seu dinheiro, <strong>sem qualquer questionamento!</strong></p>
-                            <p>Por isso, faça seu pedido agora. Você não tem absolutamente NADA a perder, e tudo a ganhar.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <div class="ref-box">
-                    <div class="ref-head">Referências Científicas</div>
-                    <img src="referencias-cientificas.png" alt="Referências" class="ref-img">
-                </div>
-            </div>
-            
+    
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="politica-privacidade.html">Privacidade</a>
+            <a href="termos-uso.html">Termos</a>
+            <a href="aviso-legal.html">Legal</a>
+            <a href="politica-reembolso.html">Reembolso</a>
         </div>
-    </div>
-
-    <div class="btm-bar">
-        <div class="btm-container">
-            <div class="btm-legal">
-                <div>© 2026 Todos os direitos reservados.</div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function genRandomStats() {
-            return Math.floor(Math.random() * (920 - 700 + 1)) + 700;
-        }
-
-        function getCurrentFormattedDate() {
-            const d = new Date();
-            const day = String(d.getDate()).padStart(2, '0');
-            const month = String(d.getMonth() + 1).padStart(2, '0');
-            const year = d.getFullYear();
-            return `${day}/${month}/${year}`;
-        }
-
-        const elUserCount = document.getElementById('liveUserDisplay');
-        const elDateLimit = document.getElementById('limitDateDisplay');
-
-        if(elUserCount) elUserCount.textContent = genRandomStats();
-        if(elDateLimit) elDateLimit.textContent = getCurrentFormattedDate();
-
-        setInterval(function() {
-            if(elUserCount) elUserCount.textContent = genRandomStats();
-        }, Math.random() * 5000 + 5000);
+    </footer>
+    
+    <!-- Vturb Player Script -->
+    <script type="text/javascript">
+        var s = document.createElement("script");
+        s.src = "https://scripts.converteai.net/d0d1a002-acf0-4f0f-8660-7e41487e7083/players/698265ff9f4a0b25f3accbc4/v4/player.js";
+        s.async = !0;
+        document.head.appendChild(s);
     </script>
-
-    <!-- URL Parameters Passthrough + Google Events -->
+    
+    <!-- URL Parameters Forwarding (gclid, utm, etc) -->
     <script>
         (function() {
-            // Parâmetros importantes para tracking
-            var trackingParams = ['gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id'];
+            const currentParams = window.location.search;
             
-            // Captura parâmetros da URL atual
-            var urlParams = new URLSearchParams(window.location.search);
-            var paramsToPass = {};
-            
-            trackingParams.forEach(function(param) {
-                var value = urlParams.get(param);
-                if (value) {
-                    paramsToPass[param] = value;
-                }
-            });
-            
-            // Salva gclid no cookie para Google Ads
-            var gclid = urlParams.get('gclid');
-            if (gclid) {
-                document.cookie = '_gcl_aw=GCL.' + Math.floor(Date.now()/1000) + '.' + gclid + '; max-age=7776000; path=/; SameSite=Lax';
-            }
-            
-            // Função para adicionar parâmetros aos links de checkout
-            function appendParamsToLinks() {
-                var checkoutLinks = document.querySelectorAll('a[href*="checkout.payt.com.br"]');
+            if (currentParams) {
+                const ctaButton = document.getElementById('ctaButton');
+                const baseUrl = ctaButton.getAttribute('href');
+                ctaButton.setAttribute('href', baseUrl + currentParams);
                 
-                checkoutLinks.forEach(function(link) {
-                    var href = link.getAttribute('href');
-                    var url = new URL(href);
-                    
-                    // Adiciona cada parâmetro capturado
-                    for (var param in paramsToPass) {
-                        if (!url.searchParams.has(param)) {
-                            url.searchParams.append(param, paramsToPass[param]);
-                        }
-                    }
-                    
-                    link.setAttribute('href', url.toString());
-                    
-                    // Adiciona evento de clique para tracking via GTM dataLayer
-                    link.addEventListener('click', function(e) {
-                        var kitInfo = this.closest('.kit-container');
-                        var kitName = kitInfo ? kitInfo.querySelector('.kit-titulo') : null;
-                        var kitPrice = kitInfo ? kitInfo.querySelector('.kit-preco-atual') : null;
-                        
-                        // Push para dataLayer (GTM)
-                        window.dataLayer = window.dataLayer || [];
-                        window.dataLayer.push({
-                            'event': 'begin_checkout',
-                            'ecommerce': {
-                                'currency': 'BRL',
-                                'value': kitPrice ? parseFloat(kitPrice.textContent.replace(/[^\d,]/g, '').replace(',', '.')) : 0,
-                                'items': [{
-                                    'item_name': kitName ? kitName.textContent : 'Lord Vigor',
-                                    'item_category': 'Suplemento',
-                                    'price': kitPrice ? parseFloat(kitPrice.textContent.replace(/[^\d,]/g, '').replace(',', '.')) : 0,
-                                    'quantity': 1
-                                }]
-                            }
-                        });
-                    });
-                });
-            }
-            
-            // Executa quando DOM estiver pronto
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', appendParamsToLinks);
-            } else {
-                appendParamsToLinks();
-            }
-            
-            // Re-executa quando seções ocultas aparecerem (VTurb)
-            var observer = new MutationObserver(function(mutations) {
-                mutations.forEach(function(mutation) {
-                    if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
-                        appendParamsToLinks();
+                // Also update footer links
+                const footerLinks = document.querySelectorAll('.footer-links a');
+                footerLinks.forEach(function(link) {
+                    const linkHref = link.getAttribute('href');
+                    if (!linkHref.startsWith('http')) {
+                        link.setAttribute('href', linkHref + currentParams);
                     }
                 });
-            });
-            
-            var secaoOfertas = document.getElementById('secao-ofertas');
-            if (secaoOfertas) {
-                observer.observe(secaoOfertas, { attributes: true });
             }
         })();
     </script>
