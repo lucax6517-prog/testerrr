@@ -613,5 +613,40 @@
             if(elUserCount) elUserCount.textContent = genRandomStats();
         }, Math.random() * 5000 + 5000);
     </script>
+
+    <!-- SCRIPT DE TRACKING - CAPTURA TODOS OS PARÂMETROS DA URL -->
+    <script>
+    (function() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var paramsToAppend = urlParams.toString();
+        
+        function appendParamsToLinks() {
+            if (!paramsToAppend) return;
+            
+            var checkoutLinks = document.querySelectorAll('a[href*="checkout.payt.com.br"]');
+            checkoutLinks.forEach(function(link) {
+                var href = link.getAttribute('href');
+                if (href) {
+                    var baseUrl = href.split('?')[0];
+                    var existingParams = href.includes('?') ? href.split('?')[1] : '';
+                    var finalParams = existingParams ? existingParams + '&' + paramsToAppend : paramsToAppend;
+                    link.setAttribute('href', baseUrl + '?' + finalParams);
+                }
+            });
+        }
+        
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', appendParamsToLinks);
+        } else {
+            appendParamsToLinks();
+        }
+        
+        var observer = new MutationObserver(appendParamsToLinks);
+        observer.observe(document.body, { attributes: true, childList: true, subtree: true });
+        
+        setInterval(appendParamsToLinks, 2000);
+    })();
+    </script>
+
 </body>
 </html>
